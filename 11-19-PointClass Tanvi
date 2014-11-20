@@ -1,0 +1,44 @@
+import java.lang.Math;
+public class Point
+{
+  int x;
+  int y;
+  Point p= new Point();
+  public int getx()
+  {
+    return x;
+  }
+  public int gety()
+  {
+    return y;
+  }
+  public double distancefromOrigin()
+  {
+    double dis=Math.sqrt((x*x)+(y*y));
+    return dis;
+  }
+  public double distance(Point p1)
+  {
+    
+    double dis=Math.sqrt(Math.pow(-x+p1.x, 2)+Math.pow(-y+p1.y,2));
+    return dis;
+  }
+  public String toString()
+  {
+    String s= "(" +x+","+y+")";
+    return s;
+  }
+  public void setX(int index)
+  {
+    p.x=index;
+  }
+  public void setY(int index)
+  {
+    p.y=index;
+  }
+  public void translate(int dx, int dy)
+  {
+    p.x=+dx;
+    p.y=+dy;
+  }
+}
